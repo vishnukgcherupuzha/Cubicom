@@ -4,7 +4,7 @@ import Operations from './operations.png'
 import Tracking from './tracking.png'
 import Reports from './reports.png'
 import Configuratios from './configurations.png'
-import Back from './back.png'
+
 class sidebar extends Component {
     render() {
         return (
@@ -46,9 +46,6 @@ class sidebar extends Component {
                                 <span>Configurations</span>
                             </li>
                         </ul>
-                        <div className="backArrow">
-                            <button><img src={Back} alt="back"></img></button>
-                        </div>
                     </div>
                 </div>
             </div>

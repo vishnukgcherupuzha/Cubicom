@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { HashRouter as Router, Link, Redirect } from "react-router-dom";
-import { Container, Row, Col, Form, Button, Alert } from 'react-bootstrap'
+import { Link, Redirect } from "react-router-dom";
+import { Form, Alert } from 'react-bootstrap'
 import Image from 'react-bootstrap/Image'
 import BackgrounImg from './Background.png'
 import Logo from './logo.png'
@@ -47,6 +47,7 @@ class login extends Component {
                     console.log(response.data);
                     if(typeof response.data === "object"){  
                         if(response.data.access_token){
+                            localStorage.setItem("token",`${response.data.access_token}` )
                             this.setState({redirect:true})
                         }
 
@@ -64,7 +65,7 @@ class login extends Component {
     notifyActionStatus = () => {
         if (this.state.notifyActionSuccess) {
             return (
-                <Alert variant="danger"><Alert.Heading>{this.state.notifyActionSuccess}</Alert.Heading>
+                <Alert variant="danger">{this.state.notifyActionSuccess}
                 </Alert>
             )
         }
@@ -76,11 +77,10 @@ class login extends Component {
         
         return (
             <div>
-                <Container className="ontainerClass">
-                    <Row>
-                        <Col sm={8}><Image className="backgroundImage" src={BackgrounImg} /></Col>
-                        <Col sm={4}><div className="LoginFormArea">
-                            <Row className="justify-content-md-center ">
+                <div className="ontainerClass">
+                        <div ><Image className="backgroundImage" src={BackgrounImg} /></div>
+                        <div className="LoginFormArea">
+                            <div>
                                 <Form onSubmit={this.handleSubmit} className="LoginForm">
                                     {this.notifyActionStatus()}
                                     <h4>Welcome to <Image src={Logo} /></h4>
@@ -102,22 +102,16 @@ class login extends Component {
                                             onChange={this.handleChange}
                                             placeholder="Enter password" />
                                         <Form.Text className="text-error" >{this.state.passwordError} </Form.Text>
-                                        <Row>
-                                            <Col><Form.Check type="checkbox" className="text-muted" label="Remember me" /></Col>
-                                            <Col><Form.Text className="text-muted"><Link to="/">Forget password?</Link></Form.Text></Col>
-                                        </Row>
+                                        <div className="checkboxCover">
+                                            <div ><input type="checkbox"  className="checkbox"/>  <label className="text-muted checkboxLabel">Remember me</label></div>
+                                            <div className="forgetPassword"><Form.Text className="text-muted "><Link to="/">Forget password?</Link></Form.Text></div>
+                                        </div>
                                     </Form.Group>
-                                    <Button className="loginButton" variant="primary" type="submit">
-                                        Login
-                                        </Button>
+                                    <button className="loginButton" type="submit">Login</button>
                                 </Form>
-                            </Row>
-                        </div></Col>
-                    </Row>
-                    <Router>
-                        <Link to="/home">login</Link>
-                    </Router>
-                </Container>
+                            </div>
+                        </div>
+                </div>
 
             </div>
         )

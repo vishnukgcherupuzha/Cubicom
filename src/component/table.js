@@ -14,17 +14,17 @@ class table extends Component {
     }
     renderTableData() {
         return this.state.tablevalues.map((tablevalue, index) => {
-            const { fename, del, undel, na, deliverin } = tablevalue //destructuring
+            const { id,fename, del, undel, na, deliverin } = tablevalue //destructuring
             return (
-                <tr>
+                <tr key={id}>
                     <td>{fename}</td>
                     <td>{del}</td>
                     <td>{undel}</td>
                     <td>{na}</td>
                     <td><span>{deliverin}</span>
-                        <span className="progressBarBackground">
-                            <span className="progressBarStatus" style={{ width: deliverin }}></span>
-                        </span>
+                        <div className="progressBarBackground">
+                            <div className="progressBarStatus" style={{ width: deliverin }}></div>
+                        </div>
                     </td>
                 </tr>
 
@@ -38,7 +38,7 @@ class table extends Component {
                 <table>
                     <thead>
                         <tr>
-                            <th style={{ width: "40rem" }}>FE NAME</th>
+                            <th style={{ width: "30rem" }}>FE NAME</th>
                             <th>DEL</th>
                             <th>UNDEL</th>
                             <th>NA</th>
