@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/vishnukgcherupuzha/Cubicom/static/css/main.a7bbed6a.chunk.css",
+    "main.js": "/vishnukgcherupuzha/Cubicom/static/js/main.4e555282.chunk.js",
+    "main.js.map": "/vishnukgcherupuzha/Cubicom/static/js/main.4e555282.chunk.js.map",
+    "runtime-main.js": "/vishnukgcherupuzha/Cubicom/static/js/runtime-main.d1257e1b.js",
+    "runtime-main.js.map": "/vishnukgcherupuzha/Cubicom/static/js/runtime-main.d1257e1b.js.map",
+    "static/css/2.17e5ed98.chunk.css": "/vishnukgcherupuzha/Cubicom/static/css/2.17e5ed98.chunk.css",
+    "static/js/2.4a9cc418.chunk.js": "/vishnukgcherupuzha/Cubicom/static/js/2.4a9cc418.chunk.js",
+    "static/js/2.4a9cc418.chunk.js.map": "/vishnukgcherupuzha/Cubicom/static/js/2.4a9cc418.chunk.js.map",
+    "index.html": "/vishnukgcherupuzha/Cubicom/index.html",
+    "precache-manifest.6516d074a27c8256aaaaa39cca137be2.js": "/vishnukgcherupuzha/Cubicom/precache-manifest.6516d074a27c8256aaaaa39cca137be2.js",
+    "service-worker.js": "/vishnukgcherupuzha/Cubicom/service-worker.js",
+    "static/css/2.17e5ed98.chunk.css.map": "/vishnukgcherupuzha/Cubicom/static/css/2.17e5ed98.chunk.css.map",
+    "static/css/main.a7bbed6a.chunk.css.map": "/vishnukgcherupuzha/Cubicom/static/css/main.a7bbed6a.chunk.css.map",
+    "static/js/2.4a9cc418.chunk.js.LICENSE": "/vishnukgcherupuzha/Cubicom/static/js/2.4a9cc418.chunk.js.LICENSE",
+    "static/media/Background.png": "/vishnukgcherupuzha/Cubicom/static/media/Background.3de23a32.png",
+    "static/media/back.png": "/vishnukgcherupuzha/Cubicom/static/media/back.bee00f6f.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d1257e1b.js",
+    "static/css/2.17e5ed98.chunk.css",
+    "static/js/2.4a9cc418.chunk.js",
+    "static/css/main.a7bbed6a.chunk.css",
+    "static/js/main.4e555282.chunk.js"
+  ]
+}
